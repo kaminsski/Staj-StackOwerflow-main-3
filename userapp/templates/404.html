@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}404{% endblock title %}
+{% block content %}
+{% load static %}
+
+
+<section class="page_404">
+	<div class="container">
+		<div class="row">	
+		<div class="col-sm-12 d-flex justify-content-center">
+		<div class="col-sm-10 col-sm-offset-1  text-center">
+		<div class="four_zero_four_bg">
+			<h1 class="text-center ">404</h1>
+		
+		
+		</div>
+		
+		<div class="contant_box_404">
+		<h3 class="h2">
+		Bu sayfaya erişemezsiniz
+		</h3>
+		
+		
+		
+		<a href={% url 'home' %} class="link_404 fs-3 text-black btn btn-danger mt-2">Anasayfaya dön</a>
+		<img class="w-100 m-auto shadow mt-5" src="{% static './img/404.jpg' %}" alt="">
+	</div>
+		</div>
+		</div>
+		</div>
+	</div>
+</section>
+{% endblock content %}

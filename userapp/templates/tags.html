@@ -1,0 +1,53 @@
+
+{% extends "base.html" %}
+{% block title %}Tags{% endblock title %}
+{% block content %}
+
+
+
+
+    <div class="tagsContainer row p-5">
+        
+        {% include "./components/_questions.html" %}
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+        <div class="tagsDescriptions">
+            <h1>Tags</h1>
+            <p>A tag is a keyword or label that categorizes your question with other, similar questions. Using the right
+                tags makes it easier for others to find and answer your question.</p>
+            <a class="text-decoration-none" href="#">Show all tag synonyms</a>
+        </div>
+        <div class="mt-3 tagsFilterContainer row justify-content-between">
+            <div class="input-group mb-3 col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text h-100" id="basic-addon1"><i
+                            class="fa-solid fa-magnifying-glass h-100"></i></span>
+                </div>
+                <form action="{% url 'tags' %}" class="d-flex">
+
+                <input name="tagAra" type="text" class="form-control" placeholder="Filter by tag name" aria-label="Username"
+                    aria-describedby="basic-addon1">
+<button class="p-2" type="submit">Ara</button>           
+</form>
+
+        </div>
+           
+        </div>
+
+        <div class="tagObjectsContainer row">
+
+        {% for tag in tagler %}
+            <div class="card col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-3" >
+                <div class="card-body">
+                    <h6 class="card-subtitle mb-2 text-muted bg-info d-inline p-1 border border-info rounded-3"> {{tag.tagler}} </h6>
+                    <p class="card-text mt-3"> {{tag.tagDescription}} </p>
+                        
+                    <a href="{% url 'tagDetail' tag.id %}" class="card-link"> {{tag.view}} adet  </a>
+                </div>
+            </div>
+          {% endfor %}
+
+        </div>
+
+        </div>
+    </div>
+    {% endblock content %}

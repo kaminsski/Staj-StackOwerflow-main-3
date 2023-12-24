@@ -1,0 +1,31 @@
+[
+    {
+        "model": "profileApp.badge",
+        "pk": 1,
+        "fields": {
+            "title": "Bronze Badge",
+            "description": "Description for Badge 1",
+            "image": "badges/badge_bronze.jpg"
+        }
+    },
+    {
+        "model": "profileApp.badge",
+        "pk": 2,
+        "fields": {
+            "title": "Silver Badge",
+            "description": "Description for Badge 2",
+            "image": "badges/badge_silver.jpg"
+        }
+    },
+    {
+        "model": "profileApp.badge",
+        "pk": 3,
+        "fields": {
+            "title": "Gold Badge",
+            "description": "Description for Badge 3",
+            "image": "badges/badge_gold.jpg"
+        }
+    }
+]
+
+
